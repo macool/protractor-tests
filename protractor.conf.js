@@ -10,8 +10,8 @@ var config = {
   ],
 
   capabilities: {
-    'browserName': 'chrome',
-    'chromeOptions': {'args': ['--disable-extensions']}
+    browserName: 'phantomjs',
+    'phantomjs.binary.path': require('phantomjs').path
   },
 
   // A base URL for your application under test. Calls to protractor.get()
@@ -31,12 +31,5 @@ var config = {
     defaultTimeoutInterval: 10000
   }
 };
-
-// use firefox on travis
-if (process.env.TRAVIS) {
-  config.capabilities = {
-    browserName: 'firefox'
-  };
-}
 
 exports.config = config;
