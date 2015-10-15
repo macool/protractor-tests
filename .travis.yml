@@ -4,6 +4,7 @@ node_js:
   - "0.12"
 before_script:
   - npm install
-  - gulp webdriver
+  - gulp webdriver &
+  - sleep 2
 script:
   - gulp
