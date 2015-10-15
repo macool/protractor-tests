@@ -1,5 +1,7 @@
 # protractor test suite
 
+[![Build Status](https://travis-ci.org/macool/protractor-tests.svg?branch=master)](https://travis-ci.org/macool/protractor-tests)
+
 ## Getting started
 
 ### Setting up test suite
