@@ -14,7 +14,7 @@ describe("moi login", function () {
   it("should show error alert", function () {
     sessionHelper.loginAs(
       process.env.ADMIN_EMAIL,
-      "wrong"
+      process.env.ADMIN_PASSWORD + "wrong"
     );
 
     var alertText = element(
