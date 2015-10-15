@@ -1,6 +1,6 @@
 require('dotenv').load();
 
-exports.config = {
+var config = {
   // The address of a running selenium server.
   seleniumAddress: 'http://localhost:4444/wd/hub',
 
@@ -31,3 +31,12 @@ exports.config = {
     defaultTimeoutInterval: 10000
   }
 };
+
+// use firefox on travis
+if (process.env.TRAVIS) {
+  config.capabilities = {
+    browserName: 'firefox'
+  };
+}
+
+exports.config = config;
