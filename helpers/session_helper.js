@@ -1,5 +1,7 @@
 var sessionHelper = {
   loginAs: function (email, password) {
+    browser.get("users/sign_in");
+
     element(
       by.id("user_email")
     ).sendKeys(email);
