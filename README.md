@@ -27,3 +27,9 @@ $ gulp webdriver
   ```
 $ gulp
   ```
+
+  **caveat**: if you're building stuff and want to use debugger and other features, should run protractor without gulp:
+
+  ```
+$ ./node_modules/.bin/protractor protractor.conf.js
+  ```
