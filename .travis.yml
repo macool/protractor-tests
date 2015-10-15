@@ -8,3 +8,5 @@ before_script:
   - sleep 2
 script:
   - gulp
+notifications:
+  email: false
