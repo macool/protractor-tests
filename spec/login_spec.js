@@ -2,7 +2,7 @@
 
 describe("moi login", function () {
   var sessionHelper = require("../helpers/session_helper");
-  
+
   beforeEach(function () {
     browser.get("users/sign_in");
   });
@@ -13,7 +13,7 @@ describe("moi login", function () {
 
   it("should show error alert", function () {
     sessionHelper.loginAs(
-      "admin@example.com",
+      process.env.ADMIN_EMAIL,
       "wrong"
     );
 
@@ -25,8 +25,8 @@ describe("moi login", function () {
 
   it("should login as admin", function () {
     sessionHelper.loginAs(
-      "admin@example.com",
-      "12345678"
+      process.env.ADMIN_EMAIL,
+      process.env.ADMIN_PASSWORD
     );
 
     var alertText = element(
@@ -37,8 +37,8 @@ describe("moi login", function () {
 
   it("should logout on admin panel", function () {
     sessionHelper.loginAs(
-      "admin@example.com",
-      "12345678"
+      process.env.ADMIN_EMAIL,
+      process.env.ADMIN_PASSWORD
     );
     browser.get("admin");
     sessionHelper.logOut();
