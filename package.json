@@ -4,11 +4,12 @@
   "license": "MIT",
   "author": "macool",
   "repository": "macool/protractor-tests",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "protractor": "2.5.1"
-  },
   "scripts": {
     "install": "node ./node_modules/protractor/bin/webdriver-manager update"
+  },
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "gulp": "^3.9.0",
+    "protractor": "2.5.1"
   }
 }
